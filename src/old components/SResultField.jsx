@@ -1,6 +1,6 @@
 import React from "react";
 import SResultIndividual from "./SResultIndividual";
-import { useSearchContext } from "./SearchContext";
+import { useSearchContext } from "../components/SearchContext";
 
 export default function SResultField() {
   const {
@@ -23,18 +23,20 @@ export default function SResultField() {
   let searchElement = currentPull.items.slice(perPage, perPage + 10);
   const showElement = searchElement.map((show) => {
     return (
-      <SResultIndividual
-        key={show.id}
-        username={show.owner.login}
-        name={show.name}
-        description={show.description}
-        language={show.language}
-        forks={show.forks}
-        stars={show.stargazers_count}
-        link={show.html_url}
-      />
+      <div className="content-center basis-1/2">
+        <SResultIndividual
+          key={show.id}
+          username={show.owner.login}
+          name={show.name}
+          description={show.description}
+          language={show.language}
+          forks={show.forks}
+          stars={show.stargazers_count}
+          link={show.html_url}
+        />
+      </div>
     );
   });
 
-  return <div>{showElement}</div>;
+  return <div className="basis-1/2">{showElement}</div>;
 }

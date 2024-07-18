@@ -1,6 +1,6 @@
 import React from "react";
 import SSuggest from "./SSuggest";
-import { useSearchContext } from "./SearchContext";
+import { useSearchContext } from "../components/SearchContext";
 import lodash from "lodash";
 
 export default function SBar() {
@@ -41,17 +41,17 @@ export default function SBar() {
   });
 
   return (
-    <div className="">
-      <div>
+    <div className="flex flex-col h-full">
+      <div className="w-64 h-full">
         <input
           type="text"
           placeholder="Enter Search Topic"
-          className=""
+          className="w-64 h-full border-solid border-2 border-black"
           onChange={debounce_func}
         />
       </div>
       <div
-        className=""
+        className="flex flex-col"
         style={{ border: autoSuggest ? "solid black 1px" : "" }}
       >
         {suggestElement}

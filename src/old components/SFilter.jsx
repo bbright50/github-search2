@@ -1,5 +1,6 @@
 import React from "react";
-import { useSearchContext } from "./SearchContext";
+import { useSearchContext } from "../components/SearchContext";
+
 
 export default function SFilter() {
   const {
@@ -41,7 +42,7 @@ export default function SFilter() {
         id="language"
         value={undefined}
         onChange={handleLanguageChange}
-        className=""
+        className="h-full border-solid border-2 border-black"
         name="language"
       >
         <option value={""} selected>
@@ -68,3 +69,5 @@ export default function SFilter() {
     </>
   );
 }
+
+

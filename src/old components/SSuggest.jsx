@@ -1,5 +1,5 @@
 import React from "react";
-import { useSearchContext } from "./SearchContext";
+import { useSearchContext } from "../components/SearchContext";
 
 export default function SSuggest(props) {
   const {

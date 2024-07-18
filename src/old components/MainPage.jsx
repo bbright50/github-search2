@@ -5,22 +5,22 @@ import SFilter from "./SFilter";
 import SResultField from "./SResultField";
 import PageNav from "./PageNav";
 import SSuggest from "./SSuggest";
-import { SearchProvider } from "./SearchContext";
+import { SearchProvider } from "../components/SearchContext";
 
 export default function MainPage() {
   return (
     <div>
       <SearchProvider>
-        <div className="">
-          <div className="">
+        <div className="flex justify-center content-evenly">
+          <div className="flex basis-1/5 justify-end gap-x-2">
             <SBar />
-            <SFilter />
           </div>
-          <div className="">
+          <div className="basis-1/6 gap-x-2">
+            <SFilter />
             <SButton />
           </div>
         </div>
-        <div className="">
+        <div className="flex flex-col">
           <SResultField />
           <PageNav />
         </div>

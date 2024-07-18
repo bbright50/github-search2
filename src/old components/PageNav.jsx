@@ -1,5 +1,5 @@
 import React from "react";
-import { useSearchContext } from "./SearchContext";
+import { useSearchContext } from "../components/SearchContext";
 
 export default function PageNav() {
   const {
@@ -31,7 +31,7 @@ export default function PageNav() {
 
   if (perPage === 0) {
     return (
-      <div className="">
+      <div className="basis-1/2">
         {display && (
           <button className="" onClick={nextPage}>
             Next Page
@@ -41,7 +41,7 @@ export default function PageNav() {
     );
   } else {
     return (
-      <div className="">
+      <div className="basis-1/2">
         {!!perPage && display && (
           <button className="" onClick={prevPage}>
             Previous Page

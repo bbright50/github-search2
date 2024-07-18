@@ -1,5 +1,5 @@
 import React from "react";
-import { useSearchContext } from "./SearchContext";
+import { useSearchContext } from "../components/SearchContext";
 import { Octokit } from "octokit";
 
 const octokit = new Octokit({
@@ -79,6 +79,6 @@ export default function SButton() {
   }
 
   return (
-    <button onClick={clickMotion}>{loading ? "Searching" : "Search"}</button>
+    <button className="border-solid border-2 border-black" onClick={clickMotion}>{loading ? "Searching" : "Search"}</button>
   );
 }
